@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-import './ContactFrom.scss';
+import './ContactForm.scss';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
@@ -16,11 +16,30 @@ const ContactForm = () => {
           type="text"
           name="name"
           value={name}
-          onChange={}
+          onChange={(e) => setName(e.target.value)}
           required
         />
       </div>
-
+      <div>
+        <label htmlFor="email">Email:</label>
+        <input 
+          type="text"
+          name="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+      </div>
+      <div>
+        <label htmlFor="message">Message:</label>
+        <textarea 
+          name="message"
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          required
+        />
+      </div>
+      <button type="submit">Submit</button>
     </form>
   )
 
