@@ -1,15 +1,37 @@
 import React, {useState} from 'react';
-import axios from 'axios';
+import Axios from 'axios';
 import './ContactForm.scss';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [status, setStatus] = useState('Submit');
+  const [status, setStatus] = useState('Submit')
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setStatus('Sending');
+    Axios.post("http://localhost:5000/api/email",{
+      name: name,
+      email: email,
+      message: message
+    })
+    .then(response => {
+        alert('help')
+        console.log(response)
+      if (response.data.status === "sent") {
+        setName('');
+        setEmail('');
+        setMessage('');
+        setStatus('Submit');
+      } else if (response.data.status === 'failed') {
+        alert('Message Failed')
+      }
+    })
+  }
 
   return (
-    <form>
+    <form onSubmit={(e) => handleSubmit(e)}>
       <div>
         <label htmlFor="name">Name:</label>
         <input 
@@ -39,7 +61,7 @@ const ContactForm = () => {
           required
         />
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit">{status}</button>
     </form>
   )
 
