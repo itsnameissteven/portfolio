@@ -17,8 +17,6 @@ const ContactForm = () => {
       message: message
     })
     .then(response => {
-        alert('help')
-        console.log(response)
       if (response.data.status === "sent") {
         setName('');
         setEmail('');
