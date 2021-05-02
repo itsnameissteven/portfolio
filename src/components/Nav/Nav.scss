@@ -1,0 +1,53 @@
+.nav {
+  display: grid;
+  grid-template-columns: 1fr repeat(4, auto);
+  align-items: end;
+  font-size: 2rem;
+  font-family: "bonkusblack";
+  height: 15rem;
+  padding: 2rem;
+  background-color: $strong;
+
+  &__header {
+    position: relative;
+    color: rgb(233, 233, 233);
+    align-self: bottom;
+    transform: skew(-2deg) rotate(-1deg);
+    // padding-bottom: 0.2rem;
+    font-size: 8rem;
+    font-size: clamp(1.6rem, 5vw, 8rem);
+    letter-spacing: 0.4rem;
+    text-shadow: 0.1rem 0.1rem 0 #e79c10, 0.2rem 0.2rem 0 #e79c10,
+      0.3rem 0.3rem 0 #e79c10, 0.4rem 0.4rem 0 #d53a33, 0.5rem 0.5rem 0 #d53a33,
+      0.6rem 0.6rem 0 #d53a33;
+  }
+
+  &__link {
+    position: relative;
+    // transform: skew(-2deg) rotate(-2deg);
+    font-size: 3rem;
+    padding: 0.2rem 1rem;
+    text-decoration: none;
+    color: #131b19;
+    margin-left: 2rem;
+
+    &::after,
+    &--active::after {
+      position: absolute;
+      content: "";
+      height: 0.2rem;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      border-bottom: 0.2rem solid rgba(255, 255, 255, 0.616);
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: all 0.3s;
+    }
+
+    &:hover::after,
+    &--active::after {
+      transform: scaleX(1);
+    }
+  }
+}
