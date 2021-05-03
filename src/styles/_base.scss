@@ -3,16 +3,14 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
-@font-face {
-  font-family: "bonkusblack";
-  src: url("../assets/bonkus-black-webfont.woff2") format("woff2"),
-    url("../assets/bonkus-black-webfont.woff") format("woff"),
-    url("../assets/Bonkus-Black.ttf") format("ttf");
-  font-weight: normal;
-  font-style: normal;
+html,
+body,
+#root,
+.App {
+  height: 100%;
 }
 
 body {
@@ -26,6 +24,7 @@ body {
 
 html {
   font-size: 62.5%;
+  font-family: "futuramedium", "Fira Sans", sans-serif;
 }
 
 .btn {

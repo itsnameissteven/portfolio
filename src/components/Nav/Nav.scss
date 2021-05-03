@@ -3,7 +3,7 @@
   grid-template-columns: 1fr auto;
   align-items: end;
   font-size: 2rem;
-  font-family: "bonkusblack";
+  font-family: "blippoblack";
   height: 15rem;
   padding: 2rem;
   background-color: $strong;
@@ -31,7 +31,7 @@
     font-size: 3rem;
     padding: 0.2rem 1rem;
     text-decoration: none;
-    color: #131b19;
+    color: $black;
     margin-left: 2rem;
 
     &::after,

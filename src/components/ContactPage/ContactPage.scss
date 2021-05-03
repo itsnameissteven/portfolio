@@ -1,0 +1,9 @@
+.contact {
+  height: calc(100% - 15rem);
+  padding: 6rem;
+
+  &__header {
+    font-family: "futurabold";
+    font-size: 5rem;
+  }
+}
