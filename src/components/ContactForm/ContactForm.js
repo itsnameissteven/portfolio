@@ -30,18 +30,19 @@ const ContactForm = () => {
   return (
     <form className="form" onSubmit={handleSubmit}>
       <div className="form__input-container">
-        <label htmlFor="name">Name:</label><br />
+        <label htmlFor="name"></label>
         <input 
+          autoComplete="off"
+          placeholder="Your Name"
           type="text"
           name="name"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
         />
-      </div>
-      <div>
-        <label htmlFor="email">Email:</label><br />
+        <label htmlFor="email"></label>
         <input 
+          placeholder="Email"
           type="text"
           name="email"
           value={email}
@@ -50,15 +51,19 @@ const ContactForm = () => {
         />
       </div>
       <div>
-        <label htmlFor="message">Message:</label><br />
+        
+      </div>
+      <div>
+        <label htmlFor="message"></label><br />
         <textarea 
+          placeholder="Message..."
           name="message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           required
         />
       </div>
-      <button type="submit">{status}</button>
+      <button className="form__btn btn" type="submit">{status}</button>
     </form>
   )
 

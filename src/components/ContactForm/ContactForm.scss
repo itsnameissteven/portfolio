@@ -2,8 +2,61 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  border: 1px solid $black;
+  justify-content: space-evenly;
+  align-items: right;
   width: 60rem;
   height: 40rem;
+  padding-left: 2rem;
+
+  &__input-container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    font-family: "futuramedium";
+    font-size: 1.6rem;
+    width: 10rem;
+    height: 4rem;
+    border-radius: 3px;
+    background: linear-gradient(to right, $lightStrongAlt, #fff 280%);
+    // background: $lightStrongAlt;
+  }
+}
+
+textarea {
+  height: 15rem;
+  width: 90%;
+}
+
+input[type="text"],
+textarea {
+  font-family: "futuramedium";
+  font-size: 1.6rem;
+  padding-bottom: 1.5rem;
+  border: unset;
+  border-bottom: 2px solid $black;
+  transition: all 0.2s ease-in;
+  margin-bottom: 3px;
+  outline: none;
+}
+
+input[type="text"]:hover,
+textarea:hover,
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #e79c10;
+}
+
+input[type="text"]:focus {
+}
+
+textarea::placeholder,
+input::placeholder {
+  color: $black;
+}
+
+label {
+  display: none;
 }

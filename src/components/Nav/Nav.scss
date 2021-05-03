@@ -4,17 +4,17 @@
   align-items: end;
   font-size: 2rem;
   font-family: "blippoblack";
-  height: 15rem;
+  height: 12rem;
   padding: 2rem;
   background-color: $strong;
 
   &__header {
     position: relative;
-    color: rgb(233, 233, 233);
+    color: #ffffff;
     align-self: bottom;
-    transform: skew(-2deg) rotate(-1deg);
+    // transform: skew(-2deg) rotate(-1deg);
     font-size: 8rem;
-    font-size: clamp(3rem, 5vw, 8rem);
+    font-size: clamp(3rem, 5vw, 6rem);
     letter-spacing: 0.4rem;
     text-shadow: 0.1rem 0.1rem 0 #e79c10, 0.2rem 0.2rem 0 #e79c10,
       0.3rem 0.3rem 0 #e79c10, 0.4rem 0.4rem 0 #d53a33, 0.5rem 0.5rem 0 #d53a33,

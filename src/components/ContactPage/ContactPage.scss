@@ -1,9 +1,27 @@
 .contact {
-  height: calc(100% - 15rem);
-  padding: 6rem;
+  margin: 5rem auto;
+  display: flex;
+  width: 80%;
+  max-width: 100rem;
+  padding: 4rem;
+  border: 1px solid $black;
+  border-radius: 3px;
+  background: #fff;
 
-  &__header {
-    font-family: "futurabold";
-    font-size: 5rem;
+  &__side-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+
+    &__header {
+      font-family: "futurabold";
+      font-size: 5rem;
+    }
+
+    &__blurb {
+      font-size: 1.6rem;
+      max-width: 40ch;
+    }
   }
 }
