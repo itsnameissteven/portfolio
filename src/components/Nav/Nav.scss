@@ -1,0 +1,105 @@
+.nav {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  font-size: 2rem;
+  font-family: "blippoblack";
+  height: 12rem;
+  padding: 2rem;
+  background-color: $strong;
+
+  &__header {
+    position: relative;
+    color: #ffffff;
+    align-self: bottom;
+    // transform: skew(-2deg) rotate(-1deg);
+    font-size: 8rem;
+    font-size: clamp(3rem, 5vw, 6rem);
+    letter-spacing: 0.4rem;
+    text-shadow: 0.1rem 0.1rem 0 #e79c10, 0.2rem 0.2rem 0 #e79c10,
+      0.3rem 0.3rem 0 #e79c10, 0.4rem 0.4rem 0 #d53a33, 0.5rem 0.5rem 0 #d53a33,
+      0.6rem 0.6rem 0 #d53a33;
+  }
+
+  &__hamburger {
+    display: none;
+    font-size: 3rem;
+  }
+
+  &__link {
+    position: relative;
+    font-size: 3rem;
+    padding: 0.2rem 1rem;
+    text-decoration: none;
+    color: $black;
+    margin-left: 2rem;
+
+    &::after,
+    &--active::after {
+      position: absolute;
+      content: "";
+      height: 0.2rem;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      border-bottom: 0.2rem solid rgba(255, 255, 255, 0.616);
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: all 0.3s;
+    }
+
+    &:hover::after,
+    &--active::after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .nav__link {
+    font-size: 2.2rem;
+    padding: 0.2rem 0.5rem;
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav {
+    height: 7.5rem;
+    align-content: center;
+    padding: 1rem;
+
+    &__link {
+      padding: 1rem 4rem;
+      margin: 0;
+      border-bottom: 1px solid #000;
+      transition: all 0.2s ease-in;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+
+      &::after,
+      &--active::after {
+        border: none;
+      }
+    }
+
+    &__hamburger {
+      display: block;
+      align-self: center;
+    }
+
+    &__link__container {
+      display: none;
+      position: absolute;
+      top: 7.5rem;
+      right: 0;
+      flex-direction: column;
+      background-color: $lightStrongAlt;
+    }
+  }
+  .unhide {
+    display: flex;
+  }
+}
