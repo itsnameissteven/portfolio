@@ -39,6 +39,12 @@ const Nav = ({ dropDown, openDropDown}) => {
         >
           Contact
         </NavLink>
+        <a 
+          className="nav__link" 
+          href="https://github.com/itsnameissteven" 
+        >
+          GitHub
+        </a>
       </div>
     </nav>
   )

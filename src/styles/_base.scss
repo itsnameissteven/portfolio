@@ -35,8 +35,8 @@ body {
   // }
 
   &:hover {
-    transform: translateY(-0.3rem);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.2);
     cursor: pointer;
 
     &:after {
