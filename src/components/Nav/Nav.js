@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { CgMenu } from 'react-icons/cg';
 
@@ -39,6 +39,12 @@ const Nav = ({ dropDown, openDropDown}) => {
         >
           Contact
         </NavLink>
+        <a 
+          className="nav__link" 
+          href="https://github.com/itsnameissteven" 
+        >
+          GitHub
+        </a>
       </div>
     </nav>
   )
