@@ -15,39 +15,27 @@ const Projects = () => {
         demo="https://rancid-tomatillos-max.herokuapp.com/"
         code="https://github.com/knees4bees/rancid-tomatillos"
       />
-      {/* <div className='project'>
-        <img className="project__img" src={rancidTomatillos} alt='Rancid Tomatillos' />
-        <div className="project__about">
-          <h3 className="project__about__header">Rancid Tomatillos</h3>
-          <p className="project__about__tech">JavaScript, React, React Router, Heroku, REST API, Cypress</p>
-          <div className="project__btn-container">
-            <a href="https://rancid-tomatillos-max.herokuapp.com/">
-              <button className="project__btn btn">Demo</button>
-            </a>
-            <a href="https://github.com/knees4bees/rancid-tomatillos">
-              <button className="project__btn btn">Code</button>
-            </a> 
-          </div>
-        </div>
-      </div> */}
-      <div className='project'>
-        <img className="project__img" src={metAPI} alt='Rancid Tomatillos' />
-        <div className="project__about">
-
-        </div>
-      </div>
-      <div className='project'>
-        <img className="project__img" src={Brew} alt='Rancid Tomatillos' />
-        <div className="project__about">
-
-        </div>
-      </div>
-      <div className='project'>
-        <img className="project__img" src={overlook} alt='Rancid Tomatillos' />
-        <div className="project__about">
-
-        </div>
-      </div>
+      <Project 
+        img={metAPI}
+        title="metAPI"
+        tech="JavaScript, HTML5, SASS, Heroku, REST API, Mocha, Chai."
+        demo="https://metapi-app.herokuapp.com/"
+        code="https://github.com/itsnameissteven/metAPI"
+      />
+      <Project 
+        img={Brew}
+        title="Brew by Design"
+        tech="JavaScript, React, React Router, Heroku, REST API, Cypress"
+        demo="https://beer-by-design.herokuapp.com/"
+        code="https://github.com/itsnameissteven/Beer-by-Design"
+      />
+      <Project 
+        img={overlook}
+        title="Overlook"
+        tech="JavaScript, HTML5, SASS, Heroku, REST API, Mocha, Chai."
+        demo="https://itsnameissteven.github.io/Overlook-Hotel/"
+        code="https://github.com/itsnameissteven/Overlook-Hotel"
+      />
     </div>  
   )
 }
