@@ -1,1 +1,63 @@
+.project {
+  position: relative;
+  width: 60rem;
+  height: 40rem;
+  overflow: hidden;
+  box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.2);
 
+  &__img {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  &__about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: space-around;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      background: #00000066;
+      backdrop-filter: blur(1px);
+    }
+
+    &:hover &__header,
+    &:hover .project__btn-container,
+    &:hover &__tech {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 0.5s ease-out;
+    }
+
+    &__header,
+    &__tech {
+      transform: translateY(-3rem);
+      font-size: 3rem;
+      opacity: 0;
+    }
+
+    &__tech {
+      margin: 2rem 0;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+  }
+
+  .project__btn-container {
+    transform: translateY(3rem);
+    opacity: 0;
+  }
+
+  &__btn {
+    @extend .form__btn;
+    margin: 1.5rem;
+  }
+}
