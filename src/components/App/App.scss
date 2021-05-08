@@ -1,6 +1,6 @@
 .App {
   background: linear-gradient(to bottom, $mainColor, $accentMain 120%);
-  padding-bottom: 4rem;
+  overflow: auto;
 }
 
 @media (prefers-reduced-motion: no-preference) {
